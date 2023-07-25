@@ -1,5 +1,5 @@
 import express, { Router } from 'express'
-import UserController from '../users/aplication/users.controller'
+import UserController from '../app/users/aplication/users.controller'
 
 export class Routes {
     public router: Router;
