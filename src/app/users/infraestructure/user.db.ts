@@ -1,8 +1,8 @@
 import { User } from "../domain/models/User";
-import { UserRepository } from "../domain/repositories/user.repository";
+import { IUserRepository } from "../domain/repositories/user.repository";
 import PrismaClient from '../../../data/prisma/prisma';
 
-class UserDbRepository implements UserRepository {
+class UserDbRepository implements IUserRepository {
     async addUser(user: User) {
         return await PrismaClient.user.create({
             data: {

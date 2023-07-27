@@ -1,8 +1,8 @@
-import { UserRepository } from '../repositories/user.repository';
+import { IUserRepository } from '../repositories/user.repository';
 import { User } from '../models/User';
 import UserDbRepository from '../../infraestructure/user.db';
 
-class UsersServices implements UserRepository {
+class UsersServices implements IUserRepository {
     async addUser(user: User) {
         return UserDbRepository.addUser(user);
     }
